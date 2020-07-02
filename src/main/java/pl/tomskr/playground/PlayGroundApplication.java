@@ -12,8 +12,7 @@ import pl.tomskr.playground.Playground.PlayGroundConfig;
 public class PlayGroundApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PlayGroundApplication.class, args);
-        ApplicationContext context = new AnnotationConfigApplicationContext(PlayGroundConfig.class);
+        ApplicationContext context = SpringApplication.run(PlayGroundApplication.class, args);
 
         FirstBean firstBean = context.getBean(FirstBean.class);
         firstBean.writeHello();
